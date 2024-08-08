@@ -5,6 +5,8 @@ const Header = () => {
     <>
       <p>hi</p>
       <p>hello</p>
+
+      <h1>Something </h1>
       <div className="flex justify-between items-center mx-32 mt-4">
         <div>
           <img className="w-38 h-9" src="./images/Logo1.png" alt="" />
