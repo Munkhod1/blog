@@ -2,7 +2,7 @@ import { CiSearch } from "react-icons/ci";
 import Link from "next/link";
 import { SearchContext } from "@/provider/search-provider";
 import { useContext } from "react";
-
+<p>hi</p>;
 const Header = () => {
   const { setSearchValue } = useContext(SearchContext);
 
