@@ -1,7 +1,9 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Link from "next/link";
+import { SearchContext } from "@/provider/search-provider";
 
 const AllBlog = () => {
+  const { searchValue } = useContext(SearchContext);
   const [articles, setArticles] = useState([]);
   const getArticlesData = async () => {
     const response = await fetch(
@@ -16,7 +18,9 @@ const AllBlog = () => {
   return (
     <>
       <div className="font-bold mx-20 my-20">
-        <p className="object-contain top-20 relative">All Blog Post</p>
+        <p className="object-contain top-20 relative">
+          All Blog Post-{searchValue}
+        </p>
       </div>
       <div className="flex justify-between items-center mx-20 mt-4">
         <ul className="flex justify-center gap-5">
