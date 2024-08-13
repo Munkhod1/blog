@@ -15,6 +15,10 @@ const AllBlog = () => {
   useEffect(() => {
     getArticlesData();
   }, []);
+
+  const findPost = articles.filter((article) =>
+    article.title.includes(searchValue)
+  );
   return (
     <>
       <div className="font-bold mx-20 my-20">
@@ -38,7 +42,7 @@ const AllBlog = () => {
         </div>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
-        {articles.map((article) => (
+        {findPost.map((article) => (
           <Link href={"/blog/" + article.id}>
             <div
               key={article.id}
