@@ -14,4 +14,5 @@ const SearchProvider = ({ children }) => {
     </SearchContext.Provider>
   );
 };
+
 export default SearchProvider;
